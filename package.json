@@ -1,0 +1,32 @@
+{
+  "name": "traversy",
+  "version": "1.0.0",
+  "description": "OVP Coaching Learning Platform for students",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server",
+    "ui": "npm start --prefix ui",
+    "dev": "concurrently \"npm run server\" \"npm run ui\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm nstall --prefix ui && npm run build --prefix ui"
+  },
+  "author": "Chayce Luxford",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "config": "^3.3.6",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.10.1",
+    "gravatar": "^1.8.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.5",
+    "morgan": "^1.10.0",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.2",
+    "nodemon": "^2.0.7"
+  }
+}
